@@ -1,0 +1,99 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>One meal is not going to get you far! Let's create the main menu to add several meals and display their properties. For this, we need to add a few commands:</p>
+<ul>
+<li><code class="java">Add</code> starts the meal input process and prompts users for the meal properties;</li>
+<li><code class="java">Show</code> prints the list of saved meals with their names, categories, and ingredients;</li>
+<li>After executing <code class="java">add</code> or <code class="java">show</code>, the program should ask what users want to do next;</li>
+<li>The program must run until users input <code class="java">exit</code> — the command that terminates the program.</li>
+</ul>
+<p>In this stage, your program should also check the user input. What if users enter something wrong?</p>
+<ul>
+<li>If the input meal category is something other than <code class="java">breakfast</code>, <code class="java">lunch</code>, or <code class="java">dinner</code>, print <code class="java">Wrong meal category! Choose from: breakfast, lunch, dinner.</code> and prompt users for input;</li>
+<li>If the meal's name or ingredients have a wrong format (for example, there are numbers or non-alphabet characters; ingredients are blank, and so on), print <code class="java">Wrong format. Use letters only!</code> and prompt users for input. Meal's name or ingredients containing several words like "peanut butter" should not be matched as wrong format.</li>
+</ul>
+<h5 id="objectives">Objectives</h5>
+<p>To complete this stage, the program must comply with the following requirements:</p>
+<ol>
+<li>Create an infinite loop of your program that can be terminated with the <code class="java">exit</code> command only;</li>
+<li>Prompt users to choose an operation with the message <code class="java">What would you like to do (add, show, exit)?</code></li>
+<li>After the command has been processed, ask for another operation;</li>
+<li>Make sure that the input and output formats are correct;</li>
+<li>If users want to <code class="java">add</code> a meal, follow the sequence from the previous stage. Don't forget to validate input as explained above. Output <code class="java">The meal has been added!</code> before proceeding;</li>
+<li>If users want to <code class="java">show</code> the meals when no meals have been added, print <code class="java">No meals saved. Add a meal first.</code> If there are meals that can be dislayed, print them in the order they've been added, following the format from Stage 1;</li>
+<li>Print <code class="java">Bye!</code> and end the program once the <code class="java">exit</code> command is entered;</li>
+<li>If users fail to input a valid command, print the following message again: <code class="java">What would you like to do (add, show, exit)?</code></li>
+</ol>
+<h5 id="examples">Examples</h5>
+<p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+<p><strong>Example 1:</strong><em> standard execution</em></p>
+<pre><code class="language-no-highlight">What would you like to do (add, show, exit)?
+&gt; add
+Which meal do you want to add (breakfast, lunch, dinner)?
+&gt; lunch
+Input the meal's name:
+&gt; salad
+Input the ingredients:
+&gt; lettuce, tomato, onion, cheese, olives
+The meal has been added!
+What would you like to do (add, show, exit)?
+&gt; add
+Which meal do you want to add (breakfast, lunch, dinner)?
+&gt; breakfast
+Input the meal's name:
+&gt; oatmeal
+Input the ingredients:
+&gt; oats, milk, banana, peanut butter
+The meal has been added!
+What would you like to do (add, show, exit)?
+&gt; show
+
+Category: lunch
+Name: salad
+Ingredients:
+lettuce
+tomato
+onion
+cheese
+olives
+
+Category: breakfast
+Name: oatmeal
+Ingredients:
+oats
+milk
+banana
+peanut butter
+
+What would you like to do (add, show, exit)?
+&gt; exit
+Bye!</code></pre>
+<p><strong>Example 2:</strong><em> invalid input format</em></p>
+<pre><code class="language-no-highlight">What would you like to do (add, show, exit)?
+&gt; show
+No meals saved. Add a meal first.
+What would you like to do (add, show, exit)?
+&gt; new meal
+What would you like to do (add, show, exit)?
+&gt; meal
+What would you like to do (add, show, exit)?
+&gt; add
+Which meal do you want to add (breakfast, lunch, dinner)?
+&gt; dessert
+Wrong meal category! Choose from: breakfast, lunch, dinner.
+&gt; lunch
+Input the meal's name:
+&gt; burger1
+Wrong format. Use letters only!
+&gt;
+Wrong format. Use letters only!
+&gt; soup
+Input the ingredients:
+&gt; carrots, ginger, coconut milk, 123
+Wrong format. Use letters only!
+&gt; carrots, ginger, coconut milk, curry
+The meal has been added!
+What would you like to do (add, show, exit)?
+&gt; exit
+Bye!</code></pre>
+</div>

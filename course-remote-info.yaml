@@ -1,0 +1,250 @@
+hyperskill_project:
+  id: 318
+  ide_files: https://cogniterra.org/media/attachments/lesson/27370/additional_files.json
+  is_template_based: false
+  use_ide: true
+update_date: "Fri, 15 Sep 2023 16:09:36 UTC"
+stages:
+  - id: 1783
+    step: 25571
+    is_completed: true
+  - id: 1784
+    step: 25572
+    is_completed: true
+  - id: 1785
+    step: 25573
+    is_completed: true
+  - id: 1786
+    step: 25574
+    is_completed: false
+  - id: 1787
+    step: 25575
+    is_completed: false
+  - id: 1788
+    step: 25576
+    is_completed: false
+topics:
+  0:
+    - title: Introduction to Java
+      theory_id: 3500
+    - title: Basic literals
+      theory_id: 3522
+    - title: Overview of the basic program
+      theory_id: 3521
+    - title: Printing data
+      theory_id: 3749
+    - title: Types and variables
+      theory_id: 3518
+    - title: Comments
+      theory_id: 3520
+    - title: Scanning the input
+      theory_id: 9055
+    - title: Coding style conventions
+      theory_id: 12411
+    - title: Naming variables
+      theory_id: 3513
+    - title: Arithmetic operations
+      theory_id: 3519
+    - title: Integer types and operations
+      theory_id: 3565
+    - title: Boolean and logical operations
+      theory_id: 3516
+    - title: Relational operators
+      theory_id: 3512
+    - title: Conditional statement
+      theory_id: 3503
+    - title: Sizes and ranges
+      theory_id: 3532
+    - title: Type casting
+      theory_id: 3510
+    - title: Calling a method
+      theory_id: 10973
+    - title: Primitive and reference types
+      theory_id: 5035
+    - title: Array
+      theory_id: 3511
+  1:
+    - title: Modulo division
+      theory_id: 10586
+    - title: Computer algorithms
+      theory_id: 16547
+    - title: The big O notation
+      theory_id: 16699
+    - title: "Best, average and worst cases"
+      theory_id: 20084
+    - title: Data structures
+      theory_id: 16927
+    - title: Pseudocode
+      theory_id: 15090
+    - title: Pseudocode basics
+      theory_id: 19510
+    - title: Complex constructions in pseudocode
+      theory_id: 20922
+    - title: Fixed-size array
+      theory_id: 20078
+    - title: Dynamic array
+      theory_id: 5357
+    - title: The while and do-while loops
+      theory_id: 3498
+    - title: The for-loop
+      theory_id: 3505
+    - title: Branching statements
+      theory_id: 3507
+    - title: Switch statement
+      theory_id: 3504
+    - title: Declaring a method
+      theory_id: 10982
+    - title: The main method
+      theory_id: 3489
+    - title: Functional decomposition
+      theory_id: 10570
+    - title: Characters
+      theory_id: 3514
+    - title: String
+      theory_id: 3523
+    - title: Iterating over arrays
+      theory_id: 3602
+    - title: Introduction to OOP
+      theory_id: 3614
+    - title: Formatted output
+      theory_id: 7046
+    - title: "Hashing: overview"
+      theory_id: 9831
+    - title: Hash function
+      theory_id: 30143
+    - title: Hash table
+      theory_id: 13054
+    - title: Introduction to generic programming
+      theory_id: 3492
+    - title: Generics and Object
+      theory_id: 3493
+    - title: What are collections
+      theory_id: 3770
+    - title: The Collections Framework overview
+      theory_id: 3624
+    - title: ArrayList
+      theory_id: 3567
+    - title: The List interface
+      theory_id: 3581
+    - title: The Set interface
+      theory_id: 3575
+    - title: The Map interface
+      theory_id: 3558
+    - title: Defining classes
+      theory_id: 3618
+    - title: Instance methods
+      theory_id: 3495
+    - title: Constructor
+      theory_id: 3535
+    - title: Access modifiers
+      theory_id: 3589
+    - title: Getters and setters
+      theory_id: 3599
+    - title: Inheritance
+      theory_id: 3583
+    - title: The keyword super
+      theory_id: 3588
+    - title: Objects
+      theory_id: 4727
+    - title: Hiding and overriding
+      theory_id: 3572
+    - title: Polymorphism
+      theory_id: 3587
+    - title: Interface
+      theory_id: 3615
+    - title: Boxing and unboxing
+      theory_id: 3595
+  2:
+    - title: "Write, compile, and run"
+      theory_id: 3739
+    - title: Command line overview
+      theory_id: 8977
+    - title: Parameters and Options
+      theory_id: 9746
+    - title: "JVM, JRE, and JDK"
+      theory_id: 3499
+    - title: What is an exception
+      theory_id: 3497
+    - title: Java Archive
+      theory_id: 4311
+    - title: Hierarchy of exceptions
+      theory_id: 3570
+    - title: Exception handling
+      theory_id: 3552
+    - title: Build tools
+      theory_id: 4284
+    - title: Gradle basics
+      theory_id: 5075
+    - title: Basic project with Gradle
+      theory_id: 5077
+    - title: Building apps using Gradle
+      theory_id: 7917
+    - title: Dependency management
+      theory_id: 5076
+    - title: Introduction to databases
+      theory_id: 8497
+    - title: Connecting to a database with JDBC
+      theory_id: 9519
+    - title: What is SQL
+      theory_id: 7054
+    - title: Basic data types
+      theory_id: 7123
+    - title: Literals
+      theory_id: 7400
+    - title: Arithmetic expressions
+      theory_id: 7409
+    - title: Basic CREATE statement
+      theory_id: 9084
+    - title: Basic SELECT statement
+      theory_id: 7392
+    - title: SELECT FROM statement
+      theory_id: 8611
+    - title: Logic and comparison expressions
+      theory_id: 8619
+    - title: Basic INSERT statement
+      theory_id: 9059
+    - title: Inserting selected rows
+      theory_id: 9595
+    - title: Basic UPDATE statement
+      theory_id: 9067
+    - title: JDBC Statements
+      theory_id: 9955
+    - title: JDBC Prepared Statements
+      theory_id: 11014
+    - title: Introduction to PostgreSQL
+      theory_id: 17974
+  3:
+    - title: Results ordering
+      theory_id: 8627
+    - title: The NULL value
+      theory_id: 7907
+    - title: Aggregate functions
+      theory_id: 9611
+    - title: GROUP BY statement
+      theory_id: 9908
+    - title: Set operations
+      theory_id: 9798
+  4:
+    - title: Relational Data Model
+      theory_id: 13785
+    - title: Data Access Object for JDBC
+      theory_id: 20188
+    - title: Updating selected rows
+      theory_id: 9603
+  5:
+    - title: Running programs on your computer
+      theory_id: 3746
+    - title: Files
+      theory_id: 3635
+    - title: Reading files
+      theory_id: 3636
+    - title: Writing files
+      theory_id: 3652
+    - title: Protected modifier
+      theory_id: 6692
+    - title: Referencing subclass objects
+      theory_id: 3585
+    - title: The Object class
+      theory_id: 3596
+    - title: toString()
+      theory_id: 3584

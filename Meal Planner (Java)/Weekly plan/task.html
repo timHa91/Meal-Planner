@@ -1,0 +1,242 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>A solid person plans for the week ahead! Let's help our users plan their meals for the entire week. In this stage, we will add a new command — <code class="java">plan</code>. We also need to change the main menu accordingly. From now on, it should read as <code class="java">What would you like to do (add, show, plan, exit)?</code></p>
+<p>When users input <code class="java">plan</code>, the program should print the first day of the week, <code class="java">Monday</code>, and print the list of all breakfasts stored in the database in <strong>alphabetical order</strong>. After this, the program should ask users to pick a meal with the following message: <code class="java">Choose the breakfast for Monday from the list above:</code></p>
+<p>After users input a meal option, the program should verify it. If it's not stored in the database, print <code class="java">This meal doesn’t exist. Choose a meal from the list above.</code> If the input is correct, move on to the next category — <code class="java">lunch</code> and then to <code class="java">dinner</code>. Once the meals for three categories are picked, print <code class="java">Yeah! We planned the meals for Monday.</code> Repeat these steps for other weekdays. In the end, print the whole plan for the week.</p>
+<p>Save the plan to the database. For this purpose, create a new table named <code class="java">plan</code> when the program starts. This table contains the meal option, meal category, and <code class="java">meal_id</code>. The third column must match the <code class="java">meal_id</code> columns of the other two tables. You are free to choose how to implement the fields in this table. If a new plan is created, delete the old plan.</p>
+<h5 id="objectives">Objectives</h5>
+<ol>
+<li>Create a table in the database named <code class="java">plan</code>;</li>
+<li>Add the <code class="java">plan</code> option to the menu;</li>
+<li>When users choose the <code class="java">plan</code> option:</li>
+</ol>
+<ul>
+<li>Print <code class="java">Monday</code>;</li>
+<li>Print the meal names of the breakfast category in alphabetical order;</li>
+<li>Prompt <code class="java">Choose the breakfast for Monday from the list above:</code></li>
+<li>Once users input a meal, print the meal names of the lunch category in alphabetical order;</li>
+<li>Prompt <code class="java">Choose the lunch for Monday from the list above:</code></li>
+<li>Once users input a meal, print the meal names of the dinner category in alphabetical order;</li>
+<li>Prompt <code class="java">Choose the dinner for Monday from the list above:</code></li>
+<li>Once users input a meal, print <code class="java">Yeah! We planned the meals for Monday.</code></li>
+<li>If a meal option isn't in the provided list, print <code class="java">This meal doesn’t exist. Choose a meal from the list above.</code>;</li>
+<li>Print a blank line and repeat for the rest of the week;</li>
+<li>Once the plan for the week is drawn, print it. The plan print format is as follows:</li>
+</ul>
+<pre><code class="language-no-highlight">Monday
+Breakfast: [meal's name]
+Lunch: [meal's name]
+Dinner: [meal's name]
+
+Tuesday etc.</code></pre>
+<ul>
+<li>Save the plan data in the <code class="java">plan</code> table. Overwrite the old plan every time a new plan is created.</li>
+</ul>
+<h5 id="example">Example</h5>
+<p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+<p></p><div class="alert alert-warning">The example below assumes that the database stores a few meals.</div><p></p>
+<p><strong>Example 1: </strong><em>planning for the week</em></p>
+<pre><code class="language-no-highlight">What would you like to do (add, show, plan, exit)?
+&gt; plan
+Monday
+oatmeal
+sandwich
+scrambled eggs
+yogurt
+Choose the breakfast for Monday from the list above:
+&gt; yogurt
+avocado egg salad
+chicken salad
+sushi
+tomato salad
+wraps
+Choose the lunch for Monday from the list above:
+&gt; tomato salad
+beef with broccoli
+pesto chicken
+pizza
+ramen
+tomato soup
+Choose the dinner for Monday from the list above:
+&gt; spaghetti
+This meal doesn’t exist. Choose a meal from the list above.
+&gt; ramen
+Yeah! We planned the meals for Monday.
+
+Tuesday
+oatmeal
+sandwich
+scrambled eggs
+yogurt
+Choose the breakfast for Tuesday from the list above:
+&gt; oatmeal
+avocado egg salad
+chicken salad
+sushi
+tomato salad
+wraps
+Choose the lunch for Tuesday from the list above:
+&gt; wraps
+beef with broccoli
+pesto chicken
+pizza
+ramen
+tomato soup
+Choose the dinner for Tuesday from the list above:
+&gt; ramen
+Yeah! We planned the meals for Tuesday.
+
+Wednesday
+oatmeal
+sandwich
+scrambled eggs
+yogurt
+Choose the breakfast for Wednesday from the list above:
+&gt; sandwich
+avocado egg salad
+chicken salad
+sushi
+tomato salad
+wraps
+Choose the lunch for Wednesday from the list above:
+&gt; avocado egg salad
+beef with broccoli
+pesto chicken
+pizza
+ramen
+tomato soup
+Choose the dinner for Wednesday from the list above:
+&gt; pesto chicken
+Yeah! We planned the meals for Wednesday.
+
+Thursday
+oatmeal
+sandwich
+scrambled eggs
+yogurt
+Choose the breakfast for Thursday from the list above:
+&gt; oatmeal
+avocado egg salad
+chicken salad
+sushi
+tomato salad
+wraps
+Choose the lunch for Thursday from the list above:
+&gt; chicken salad
+beef with broccoli
+pesto chicken
+pizza
+ramen
+tomato soup
+Choose the dinner for Thursday from the list above:
+&gt; tomato soup
+Yeah! We planned the meals for Thursday.
+
+Friday
+oatmeal
+sandwich
+scrambled eggs
+yogurt
+Choose the breakfast for Friday from the list above:
+&gt; yogurt
+avocado egg salad
+chicken salad
+sushi
+tomato salad
+wraps
+Choose the lunch for Friday from the list above:
+&gt; sushi
+beef with broccoli
+pesto chicken
+pizza
+ramen
+tomato soup
+Choose the dinner for Friday from the list above:
+&gt; pizza
+Yeah! We planned the meals for Friday.
+
+Saturday
+oatmeal
+sandwich
+scrambled eggs
+yogurt
+Choose the breakfast for Saturday from the list above:
+&gt; scrambled eggs
+avocado egg salad
+chicken salad
+sushi
+tomato salad
+wraps
+Choose the lunch for Saturday from the list above:
+&gt; wraps
+beef with broccoli
+pesto chicken
+pizza
+ramen
+tomato soup
+Choose the dinner for Saturday from the list above:
+&gt; pesto chicken
+Yeah! We planned the meals for Saturday.
+
+Sunday
+oatmeal
+sandwich
+scrambled eggs
+yogurt
+Choose the breakfast for Sunday from the list above:
+&gt; scrambled eggs
+avocado egg salad
+chicken salad
+sushi
+tomato salad
+wraps
+Choose the lunch for Sunday from the list above:
+&gt; tomato salad
+beef with broccoli
+pesto chicken
+pizza
+ramen
+tomato soup
+Choose the dinner for Sunday from the list above:
+&gt; beef with broccoli
+Yeah! We planned the meals for Sunday.
+
+Monday
+Breakfast: yogurt
+Lunch: tomato salad
+Dinner: ramen
+
+Tuesday
+Breakfast: oatmeal
+Lunch: wraps
+Dinner: ramen
+
+Wednesday
+Breakfast: sandwich
+Lunch: avocado egg salad
+Dinner: pesto chicken
+
+Thursday
+Breakfast: oatmeal
+Lunch: chicken salad
+Dinner: tomato soup
+
+Friday
+Breakfast: yogurt
+Lunch: sushi
+Dinner: pizza
+
+Saturday
+Breakfast: scrambled eggs
+Lunch: wraps
+Dinner: pesto chicken
+
+Sunday
+Breakfast: scrambled eggs
+Lunch: tomato salad
+Dinner: beef with broccoli
+
+What would you like to do (add, show, plan, exit)?
+&gt; exit
+Bye!</code></pre>
+</div>

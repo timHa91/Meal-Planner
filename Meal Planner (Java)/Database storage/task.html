@@ -1,0 +1,120 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>At this point, when we close our program, we lose all our stored meals! Let's improve our planner and connect a database to retrieve all meals after a restart.</p>
+<p>To connect a database to our project, we can use <strong>Java DataBase Connectivity </strong>(JDBC), an API for database-independent connectivity between programs and various databases. This standard ensures the same methods for connecting, updating, querying, and results handling, regardless of the database you employ. However, the choice of the database affects the SQL syntax, available data types, and supported features.</p>
+<p>In this project, we will refer to <strong>PostgreSQL</strong>. It is a powerful, open source object-relational database system that contains great capabilities. PostgreSQL runs on all major operating systems and supports advanced data types such as arrays, hstore, and user-defined types. Although, there may be some differences between different SQL databases. You can find more information in the official PostgreSQL <a href="https://www.postgresql.org/docs/" rel="noopener noreferrer nofollow" target="_blank">documentation</a></p>
+<p>In this stage, we're going to store meal data in database tables. When the program restarts, the saved data should be available in the program.</p>
+<p>To use PostgreSQL in Java, you need to import the <code class="language-java">postgresql-jdbc</code> library into your project. For the Meal Planner, this is already done. You can find an example of this driver on the <a href="https://jdbc.postgresql.org/documentation/use/" rel="noopener noreferrer nofollow" target="_blank">postgresql-jdbc</a> website.</p>
+<pre><code class="language-java">import java.sql.*
+
+public class Main {
+  public static void main(String[] argv) throws SQLException {
+    String DB_URL = "jdbc:postgresql:person_db";
+    String USER = "postgres";
+    String PASS = "1111";
+
+    Connection connection = DriverManager.getConnection(DB_URL, USER, PASS);
+    connection.setAutoCommit(true);
+
+    Statement statement = connection.createStatement();
+    statement.executeUpdate("drop table if exists person");
+    statement.executeUpdate("create table person (" +
+            "id integer," +
+            "name varchar(1024) NOT NULL" +
+            ")");
+    statement.executeUpdate("insert into person (id, name) values (1, 'leo')");
+    statement.executeUpdate("insert into person (id, name) values (2, 'yui')");
+
+    ResultSet rs = statement.executeQuery("select * from person");
+    // Read the result set
+    while (rs.next()) {
+      System.out.println("name = " + rs.getString("name"));
+      System.out.println("id = " + rs.getInt("id"));
+    }
+    statement.close();
+    connection.close();
+  }
+}</code></pre>
+<p>Mind that the nested<strong> </strong><code class="language-java">resultset</code> requires different <code class="language-java">statement</code> instances.</p>
+<p>The <code class="language-java">jdbc:postgresql:person_db</code> string includes three strings divided by semicolons. The first one is the database interface, the second is the database, and the third is the name of your database.</p>
+<p>It's a good idea to use <a href="https://www.pgadmin.org/" rel="noopener noreferrer nofollow" target="_blank">pgAdmin</a> — a nice GUI tool for browsing and managing PostgreSQL databases. You can inspect the tables you've created and the data in your database.</p>
+<p></p><div class="alert alert-warning">If you are connected to the database file when you <strong>check</strong> your code, it may lead to issues.</div><p></p>
+<p></p><div class="alert alert-warning">Make sure to create <strong>meals_db</strong> database and add <strong>postgres</strong> user with <strong>1111</strong> password to it before initializing tests.</div><p></p>
+<h5 id="objectives">Objectives</h5>
+<ol>
+<li>Your program should connect to a database named <code class="language-java">meals_db</code>;</li>
+<li>Create two tables in this database schema. Name the first one as <code class="language-java">meals</code> with three columns: <code class="language-java">category</code> (varchar), <code class="language-java">meal</code> (varchar), and <code class="language-java">meal_id</code> (integer). Name the second table <code class="language-java">ingredients</code>; it must contain three columns: <code class="language-java">ingredient</code> (varchar), <code class="language-java">ingredient_id</code> (integer), and <code class="language-java">meal_id</code> (integer). <code class="language-java">meal_id</code> in both tables must match!</li>
+<li>Read all data in the tables, so their contents are available before a <code class="language-java">show</code> operation is requested;</li>
+<li>When users <code class="language-java">add</code> a new meal, store it in your database.</li>
+</ol>
+<p>There are no changes in the input/output structure in this stage.</p>
+<p><strong>Note:</strong> The contents of the database tables are cleared at the beginning of the testing process.</p>
+<h5 id="example">Example</h5>
+<p>The greater-than symbol followed by a space (<code class="language-java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+<p><strong>Example 1:</strong><em> standard execution and a restart</em></p>
+<pre><code class="language-no-highlight">What would you like to do (add, show, exit)?
+&gt; add
+Which meal do you want to add (breakfast, lunch, dinner)?
+&gt; lunch
+Input the meal's name:
+&gt; salad
+Input the ingredients:
+&gt; lettuce, tomato, onion, cheese, olives
+The meal has been added!
+What would you like to do (add, show, exit)?
+&gt; add
+Which meal do you want to add (breakfast, lunch, dinner)?
+&gt; breakfast
+Input the meal's name:
+&gt; oatmeal
+Input the ingredients:
+&gt; oats, milk, banana, peanut butter
+The meal has been added!
+What would you like to do (add, show, exit)?
+&gt; show
+
+Category: lunch
+Name: salad
+Ingredients:
+lettuce
+tomato
+onion
+cheese
+olives
+
+Category: breakfast
+Name: oatmeal
+Ingredients:
+oats
+milk
+banana
+peanut butter
+
+What would you like to do (add, show, exit)?
+&gt; exit
+Bye!
+
+What would you like to do (add, show, exit)?
+&gt; show
+
+Category: lunch
+Name: salad
+Ingredients:
+lettuce
+tomato
+onion
+cheese
+olives
+
+Category: breakfast
+Name: oatmeal
+Ingredients:
+oats
+milk
+banana
+peanut butter
+
+What would you like to do (add, show, exit)?
+&gt; exit
+Bye!</code></pre>
+</div>

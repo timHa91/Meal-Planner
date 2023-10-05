@@ -1,0 +1,9 @@
+type: framework
+content:
+  - Add meals
+  - Create a menu
+  - Database storage
+  - Show saved meals
+  - Weekly plan
+  - Shopping list
+current_task: 3

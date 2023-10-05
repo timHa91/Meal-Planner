@@ -1,0 +1,41 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>Meal planning is only half of the job: we also need to be sure that we have all ingredients! In this stage, the program should generate a shopping list that contains the required ingredients for meals. If several meals require one ingredient, put it in the list only once in the following format: <code class="java">ingredient xN</code>, where <code class="java">N</code> is how many times we need this ingredient. </p>
+<p>Finally, let's add the option of saving the list as a file. Add the <code class="java">save</code> command to the menu. Save the shopping list to a file and print an appropriate message. Don't forget to ask users for the file name.</p>
+<h5 id="objectives">Objectives</h5>
+<ol>
+<li>Add the <code class="java">save</code> option to the menu. This is how the first message should look in this stage: <code class="java">What would you like to do (add, show, plan, save, exit)?</code></li>
+<li>When users choose <code class="java">plan</code>:</li>
+</ol>
+<ul>
+<li>The <code class="java">save</code> option is available only after users have made the plan for the week. If the plan isn't ready, print <code class="java">Unable to save. Plan your meals first.</code> and go back to the menu;</li>
+<li>Ask users about a filename with the message: <code class="java">Input a filename:</code></li>
+<li>When the list has been saved, print <code class="java">Saved!</code></li>
+</ul>
+<p>The format of the shopping list is as follows:</p>
+<pre><code class="language-no-highlight">eggs
+tomato x3
+beef
+broccoli
+salmon
+chicken x2</code></pre>
+<p>The ingredients can be stored in any order.</p>
+<h5 id="examples">Examples</h5>
+<p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+<p><strong>Example 1</strong>: <em>the database has a few meals; the plan command has been executed</em></p>
+<pre><code class="language-no-highlight">What would you like to do (add, show, plan, save, exit)?
+&gt; save
+Input a filename:
+&gt; shoppinglist.txt
+Saved!
+What would you like to do (add, show, plan, save, exit)?
+&gt; exit
+Bye!</code></pre>
+<p><strong>Example 2</strong>: <em>the database has a few meals; the plan command hasn't been executed</em></p>
+<pre><code class="language-no-highlight">What would you like to do (add, show, plan, save, exit)?
+&gt; save
+Unable to save. Plan your meals first.
+What would you like to do (add, show, plan, save, exit)?
+&gt; exit
+Bye!</code></pre>
+</div>

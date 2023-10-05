@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MealPlannerTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-26T11:15:19" hostname="Tims-MacBook-Pro.fritz.box" time="0.221">
+  <properties/>
+  <testcase name="start" classname="MealPlannerTests" time="0.221"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+What would you like to do (add, show, exit)?
+> exit
+Bye!
+?[1;31m
+Start test 2?[0m
+What would you like to do (add, show, exit)?
+> add
+Which meal do you want to add (breakfast, lunch, dinner)?
+> lunch
+Input the meal's name:
+> sushi
+Input the ingredients:
+> salmon, rice, avocado
+The meal has been added!
+What would you like to do (add, show, exit)?
+> add
+Which meal do you want to add (breakfast, lunch, dinner)?
+> lunch
+Input the meal's name:
+> omelette
+Input the ingredients:
+> eggs, milk, cheese
+The meal has been added!
+What would you like to do (add, show, exit)?
+> add
+Which meal do you want to add (breakfast, lunch, dinner)?
+> breakfast
+Input the meal's name:
+> oatmeal
+Input the ingredients:
+> oats, milk, banana, peanut butter
+The meal has been added!
+What would you like to do (add, show, exit)?
+> show
+Which category do you want to print (breakfast, lunch, dinner)?
+> lunch
+Category: lunch
+
+Name: sushi
+Ingredients:
+salmon
+ rice
+ avocado
+
+Name: omelette
+Ingredients:
+eggs
+ milk
+ cheese
+What would you like to do (add, show, exit)?
+> show
+Which category do you want to print (breakfast, lunch, dinner)?
+> breakfast
+Category: breakfast
+
+Name: oatmeal
+Ingredients:
+oats
+ milk
+ banana
+ peanut butter
+What would you like to do (add, show, exit)?
+> exit
+Bye!
+?[1;31m
+Start test 3?[0m
+What would you like to do (add, show, exit)?
+> show
+Which category do you want to print (breakfast, lunch, dinner)?
+> lunch
+Category: lunch
+
+Name: sushi
+Ingredients:
+salmon
+ rice
+ avocado
+
+Name: omelette
+Ingredients:
+eggs
+ milk
+ cheese
+What would you like to do (add, show, exit)?
+> show
+Which category do you want to print (breakfast, lunch, dinner)?
+> breakfast
+Category: breakfast
+
+Name: oatmeal
+Ingredients:
+oats
+ milk
+ banana
+ peanut butter
+What would you like to do (add, show, exit)?
+> show
+Which category do you want to print (breakfast, lunch, dinner)?
+> brunch
+Wrong meal category! Choose from: breakfast, lunch, dinner.
+> dinner
+No meals found.
+What would you like to do (add, show, exit)?
+> add
+Which meal do you want to add (breakfast, lunch, dinner)?
+> dinner
+Input the meal's name:
+> soup
+Input the ingredients:
+> potato, rice, mushrooms
+The meal has been added!
+What would you like to do (add, show, exit)?
+> show
+Which category do you want to print (breakfast, lunch, dinner)?
+> dinner
+Category: dinner
+
+Name: soup
+Ingredients:
+potato
+ rice
+ mushrooms
+What would you like to do (add, show, exit)?
+> exit
+Bye!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

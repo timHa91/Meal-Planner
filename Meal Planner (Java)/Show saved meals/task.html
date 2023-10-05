@@ -1,0 +1,93 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>Let's improve the navigation in the program and make it more user-friendly! In this stage, we will enhance the <code class="java">show</code> command. The program will ask users to specify the meal category with the following message: <code class="java">Which category do you want to print (breakfast, lunch, dinner)?</code> After this, the program will search through the database and print only the chosen category. If the requested category is empty, the program should show an appropriate message.</p>
+<h5 id="objectives">Objectives</h5>
+<p>When users input <code class="java">show</code>, your program should:</p>
+<ul>
+<li>Ask users for the meal category;</li>
+<li>Search through the database for meals from the chosen category;</li>
+<li>Print <code class="java">Category: &lt;category&gt;</code>. For each meal, print <code class="java">Meal's name: &lt;meal name&gt;</code>, followed by the specific meal ingredients list, each on a new line. The meals and ingredients should be printed <strong>in the same order</strong> they've been added;</li>
+<li>If the input category doesn't exist, print <code class="java">Wrong meal category! Choose from: breakfast, lunch, dinner.</code>;</li>
+<li>If there're no meals in the category, print <code class="java">No meals found.</code></li>
+</ul>
+<h5 id="examples">Examples</h5>
+<p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+<p><strong>Example 1:</strong><em> standard execution</em></p>
+<pre><code class="language-no-highlight">What would you like to do (add, show, exit)?
+&gt; add
+Which meal do you want to add (breakfast, lunch, dinner)?
+&gt; lunch
+Input the meal's name:
+&gt; salad
+Input the ingredients:
+&gt; lettuce, tomato, onion, cheese, olives
+The meal has been added!
+What would you like to do (add, show, exit)?
+&gt; add
+Which meal do you want to add (breakfast, lunch, dinner)?
+&gt; lunch
+Input the meal's name:
+&gt; omelette
+Input the ingredients:
+&gt; eggs, milk, cheese
+The meal has been added!
+What would you like to do (add, show, exit)?
+&gt; add
+Which meal do you want to add (breakfast, lunch, dinner)?
+&gt; breakfast
+Input the meal's name:
+&gt; oatmeal
+Input the ingredients:
+&gt; oats, milk, banana, peanut butter
+The meal has been added!
+What would you like to do (add, show, exit)?
+&gt; show
+Which category do you want to print (breakfast, lunch, dinner)?
+&gt; breakfast
+Category: breakfast
+Name: oatmeal
+Ingredients:
+oats
+milk
+banana
+peanut butter
+What would you like to do (add, show, exit)?
+&gt; show
+Which category do you want to print (breakfast, lunch, dinner)?
+&gt; lunch
+Category: lunch
+
+Name: salad
+Ingredients:
+lettuce
+tomato
+onion
+cheese
+olives
+
+Name: omelette
+Ingredients:
+eggs
+milk
+cheese
+
+What would you like to do (add, show, exit)?
+&gt; exit
+Bye!</code></pre>
+<p><strong>Example 2:</strong><em> warnings during execution</em></p>
+<pre><code class="language-no-highlight">What would you like to do (add, show, exit)?
+&gt; show
+Which category do you want to print (breakfast, lunch, dinner)?
+&gt; dinner
+No meals found.
+What would you like to do (add, show, exit)?
+&gt; show
+Which category do you want to print (breakfast, lunch, dinner)?
+&gt; brunch
+Wrong meal category! Choose from: breakfast, lunch, dinner.
+&gt; dinner
+No meals found.
+What would you like to do (add, show, exit)?
+&gt; exit
+Bye!</code></pre>
+</div>
